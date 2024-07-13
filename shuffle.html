@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .gallery {
+      perspective: 1000px;
+    }
+    .gallery-item {
+      transform-style: preserve-3d;
+      transition: transform 1s;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="gallery grid grid-cols-3 gap-4">
+    <div class="gallery-item bg-white p-4 shadow-lg">
+      <img src="image1.jpg" alt="Image 1" class="w-full h-auto">
+    </div>
+    <div class="gallery-item bg-white p-4 shadow-lg">
+      <img src="image2.jpg" alt="Image 2" class="w-full h-auto">
+    </div>
+    <div class="gallery-item bg-white p-4 shadow-lg">
+      <img src="image3.jpg" alt="Image 3" class="w-full h-auto">
+    </div>
+    <!-- Add more images as needed -->
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const items = document.querySelectorAll('.gallery-item');
+      let currentAngle = 0;
+
+      setInterval(() => {
+        currentAngle += 90;
+        items.forEach((item, index) => {
+          item.style.transform = `rotateY(${currentAngle + (index * 30)}deg)`;
+        });
+      }, 3000); // Rotate every 3 seconds
+    });
+  </script>
+</body>
+</html>

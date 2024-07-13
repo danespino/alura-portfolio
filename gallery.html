@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snap Scrolling Image Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .gallery {
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+      display: flex;
+      gap: 1rem;
+    }
+    .gallery-item {
+      scroll-snap-align: center;
+      min-width: 80%;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="gallery px-4">
+    <div class="gallery-item bg-white p-4 shadow-lg">
+      <img src="https://via.placeholder.com/400x300" alt="Image 1" class="w-full h-auto">
+    </div>
+    <div class="gallery-item bg-white p-4 shadow-lg">
+      <img src="https://via.placeholder.com/400x300" alt="Image 2" class="w-full h-auto">
+    </div>
+    <div class="gallery-item bg-white p-4 shadow-lg">
+      <img src="https://via.placeholder.com/400x300" alt="Image 3" class="w-full h-auto">
+    </div>
+    <!-- Add more images as needed -->
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const gallery = document.querySelector('.gallery');
+      const items = document.querySelectorAll('.gallery-item');
+
+      gallery.addEventListener('scroll', () => {
+        items.forEach(item => {
+          const rect = item.getBoundingClientRect();
+          const galleryRect = gallery.getBoundingClientRect();
+
+          if (rect.left >= galleryRect.left && rect.right <= galleryRect.right) {
+            item.classList.add('border-4', 'border-blue-500');
+            console.log('Selected:', item.querySelector('img').alt);
+          } else {
+            item.classList.remove('border-4', 'border-blue-500');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
