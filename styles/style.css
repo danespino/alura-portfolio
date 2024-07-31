@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap');
 
+.navigationBar {
+    @apply bg-slate-900 flex flex-row justify-around align-middle shadow-lg border-t-2 border-b-4 border-t-red-800 border-b-yellow-600 
+}
+
 .hover\:w-full:hover {
     width: 100%;
 }
@@ -15,6 +19,30 @@
 }
 .group:hover .group-hover\:flex-grow {
     flex-grow: 1;
+}
+
+.navigationButton a {
+    @apply flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500;
+}
+
+.navigationButtonIcon{
+    @apply text-2xl pt-1 mb-1 block group-hover:bg-gradient-to-bl from-amber-500 to-gray-200 bg-clip-text group-hover:text-transparent
+}
+
+.navigationButtonText{
+    @apply block text-xs pb-2 group-hover:bg-gradient-to-r from-amber-500 to-gray-200 bg-clip-text group-hover:text-transparent
+}
+
+.actIndicator {
+    @apply block w-5 mx-auto h-1 group-hover:bg-gradient-to-r from-pink-500 to-purple-600 rounded-full
+}
+
+.triangleIndicator {
+    @apply relative inline-block w-0 h-0 border-solid border-t-0 border-r-[100px] border-l-0 border-b-[100px] border-l-transparent border-t-transparent border-r-[#d7b02f]  border-b-transparent;
+}
+
+.triangleIndicator span{
+    @apply fixed top-0 right-1 z-10;
 }
 
 .top-100 {top: 100%}

@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido a mi Portafolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-scroll bg-gradient-to-b from-slate-800 via-gray-500 to-gray-200">
     <header class="sticky top-0 z-50">
-        <nav class="bg-slate-900 flex flex-row justify-around align-middle shadow-lg border-t-2 border-b-4 border-t-red-800 border-b-yellow-600 ">
+        <nav class="navigationBar">
             <div class="hidden md:flex">
               <img src="images/logo.png" alt="DanEspino Logo" width="150" height="100">
             </div>
@@ -17,39 +18,39 @@
               <div class="w-full max-w-md mx-auto">
                 <div class="px-7 rounded-2xl font-bold">
                   <div class="flex">
-                      <div class="flex-1 group">
-                          <a href="#start" class="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500">
+                      <div class="flex-1 group navigationButton">
+                          <a href="#start">
                               <span class="block px-1 pt-1 pb-1">
-                                  <i class="fa fa-home text-2xl pt-1 mb-1 block group-hover:bg-gradient-to-bl from-amber-500 to-gray-200 bg-clip-text group-hover:text-transparent"></i>
-                                  <span class="block text-xs pb-2 group-hover:bg-gradient-to-r from-amber-500 to-gray-200 bg-clip-text group-hover:text-transparent">Start</span>
-                                  <span class="block w-5 mx-auto h-1 group-hover:bg-gradient-to-r from-pink-500 to-purple-600 rounded-full"></span>
+                                  <i class="navigationButtonIcon fa fa-home"></i>
+                                  <span class="navigationButtonText">Start</span>
+                                  <span class="actIndicator"></span>
                               </span>
                           </a>
                       </div>
-                      <div class="flex-1 group">
-                          <a href="#projects" class="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500">
+                      <div class="flex-1 group navigationButton">
+                          <a href="#projects">
                               <span class="block px-1 pt-1 pb-1">
-                                  <i class="fa-solid fa-briefcase text-2xl pt-1 mb-1 block group-hover:bg-gradient-to-bl from-amber-500 to-gray-200 bg-clip-text group-hover:text-transparent"></i>
-                                  <span class="block text-xs pb-2 group-hover:bg-gradient-to-r from-amber-500 to-gray-200 bg-clip-text group-hover:text-transparent">Projects</span>
-                                  <span class="block w-5 mx-auto h-1 group-hover:bg-gradient-to-r from-pink-500 to-purple-600 rounded-full"></span>
+                                  <i class="navigationButtonIcon fa-solid fa-briefcase"></i>
+                                  <span class="navigationButtonText">Projects</span>
+                                  <span class="actIndicator"></span>
                               </span>
                           </a>
                       </div>
-                      <div class="flex-1 group">
-                          <a href="#profile" class="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500">
+                      <div class="flex-1 group navigationButton">
+                          <a href="#profile">
                               <span class="block px-1 pt-1 pb-1">
-                                  <i class="fa fa-id-badge text-2xl pt-1 mb-1 block group-hover:bg-gradient-to-bl from-amber-500 to-gray-200 bg-clip-text group-hover:text-transparent"></i>
-                                  <span class="block text-xs pb-2 group-hover:bg-gradient-to-r from-amber-500 to-gray-200 bg-clip-text group-hover:text-transparent">Profile</span>
-                                  <span class="block w-5 mx-auto h-1 group-hover:bg-gradient-to-r from-pink-500 to-purple-600 rounded-full"></span>
+                                  <i class="navigationButtonIcon fa fa-id-badge"></i>
+                                  <span class="navigationButtonText">Profile</span>
+                                  <span class="actIndicator"></span>
                               </span>
                           </a>
                       </div>
-                      <div class="flex-1 group">
-                          <a href="#contact" class="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500">
+                      <div class="flex-1 group navigationButton">
+                          <a href="#contact">
                               <span class="block px-1 pt-1 pb-1">
-                                  <i class="fa-solid fa-comments text-2xl pt-1 mb-1 block group-hover:bg-gradient-to-bl from-amber-500 to-gray-200 bg-clip-text group-hover:text-transparent"></i>
-                                  <span class="block text-xs pb-2 group-hover:bg-gradient-to-r from-amber-500 to-gray-200 bg-clip-text group-hover:text-transparent">Contact Me</span>
-                                  <span class="block w-5 mx-auto h-1 group-hover:bg-gradient-to-r from-amber-500 to-gray-200 rounded-full"></span>
+                                  <i class="navigationButtonIcon fa-solid fa-comments"></i>
+                                  <span class="navigationButtonText">Contact Me</span>
+                                  <span class="actIndicator"></span>
                               </span>
                           </a>
                       </div>
@@ -62,7 +63,7 @@
             </div>
         </nav>
     </header>
-    <main class="h-screen overflow-y-scroll scroll-smooth snap-y snap-mandatory *:py-30 *:z-0">
+    <main class="h-screen overflow-y-scroll scroll-smooth snap-y snap-normal *:py-30 *:z-0">
         <div id="start" class="snap-start scroll-mb-30 min-h-screen mb-8 content-center">
             <div class=" lg:w-1/2 lg:float-left px-10 lg:py-18 lg:mt-12">
                 <h1 class="font-sans text-4xl tracking-wide font-semibold text-gray-300 py-2 text-justify">
@@ -78,54 +79,35 @@
                 <img src="images/personal.png" alt="Dan Espino Photo" class="shadow-lg scale-100 md:scale-75">
             </div>
         </div>
-        <div id="projects" class="bg-black/80 snap-start scroll-mb-30 min-h-screen w-full px-auto border content-center static z-0 md:h-2/3">
-            <h2 class="text-gray-200 text-center font-extrabold text-4xl py-4">Projects</h2>
+        <div id="projects" class="bg-black/80 snap-start scroll-mb-30 min-h-screen w-full px-auto border content-start static z-0 md:h-2/3">
+            <div class="w-full flex items-center justify-center ml-2 py-4" x-data="{ open: false }">
+                <h2 class="text-gray-200 font-extrabold text-4xl py-4">Projects</h2>
+                    <button x-on:click="open = ! open" class="ml-2"><i class="fa-solid fa-filter text-white"></i></button>
+                    <div x-show="open" class="flex flex-row-reverse flex-wrap float-end items-stretch *:mx-6" x-transition>
+                        <div>
+                            <label for="stacks" class="block mb-2 text-sm font-medium text-gray-400 w-full">Stack</label>
+                            <select name="stacks" id="stackSelector" class="rounded-lg px-4 py-2.5 h-12 border border-gray-300 text-gray-600 text-base">
+                                <option>All</option>
+                            </select>    
+                        </div>
+                        <div>
+                            <label for="year" class="block mb-2 text-sm font-medium text-gray-400 w-full">Year</label>
+                            <select name="year" id="yearSelector" class="rounded-lg px-4 py-2.5 h-12 border border-gray-300 text-gray-600 text-base">
+                                <option>All</option>
+                            </select>    
+                        </div>
+                    </div>
+            </div>       
 
-            <div class="flex flex-row-reverse flex-wrap w-full items-stretch *:mx-6">
-                <div>
-                    <label for="stacks" class="block mb-2 text-sm font-medium text-gray-600 w-full">Stack</label>
-                    <select name="stacks" id="stackselector" class="rounded-lg px-4 py-2.5 h-12 border border-gray-300 text-gray-600 text-base">
-                        <option value="opt_1"><i class="fa-solid fa-comments text-2xl pt-1 mb-1 block group-hover:bg-gradient-to-bl from-amber-500 to-gray-200 bg-clip-text group-hover:text-transparent"></i>All</option>
-                        <option value="opt_2">Laravel</option>
-                        <option value="opt_3">Js</option>
-                    </select>    
-                </div>
-                <div>
-                    <label for="year" class="block mb-2 text-sm font-medium text-gray-600 w-full">Stack</label>
-                    <select name="year" id="yearselector" class="rounded-lg px-4 py-2.5 h-12 border border-gray-300 text-gray-600 text-base">
-                        <option value="opt_1">2024</option>
-                        <option value="opt_2">2023</option>
-                        <option value="opt_3">2022</option>
-                    </select>    
-                </div>
-            </div>
-            
-
-            <div class="flex overflow-x-scroll h-full scroll-smooth snap-x snap-mandatory snap-always py-5 md:h-3/4 *:mx-24 *:w-3/4 *:border *:h-auto">
-                <div class="snap-center snap-always flex flex-shrink-0 items-stretch justify-center relative hover:scale-125 hover:text-2xl">
+            <div id="projectsGal" class="flex overflow-x-scroll h-full scroll-smooth snap-x snap-mandatory snap-always py-5 md:h-2/3 *:mx-24 *:w-3/4 *:border *:h-auto">
+                <div class="snap-center snap-always flex flex-shrink-0 items-stretch justify-center relative hover:scale-100 hover:text-2xl">
                     <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" class="justify-center w-full h-auto scale-100 relative z-0" />
-                    <p class="font-bold text-white self-center justify-center absolute z-10">This is a Description Text</p>
-                </div>
-                <div class="snap-center snap-always flex flex-shrink-0 items-stretch justify-center relative hover:scale-125 hover:text-2xl">
-                    <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" class="justify-center w-full h-auto scale-100 relative z-0"  />
-                    <p class="font-bold text-white self-center justify-center absolute z-10">This is a Description Text</p>
-                </div>
-                <div class="snap-center snap-always flex flex-shrink-0 items-stretch justify-center relative hover:scale-125 hover:text-2xl">
-                    <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" class="justify-center w-full h-auto scale-100 relative z-0" />
-                    <p class="font-bold text-white self-center justify-center absolute z-10">This is a Description Text</p>
-                </div>
-                <div class="snap-center snap-always flex flex-shrink-0 items-stretch justify-center relative hover:scale-125 hover:text-2xl">
-                    <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" class="justify-center w-full h-auto scale-100 relative z-0" />
-                    <p class="font-bold text-white self-center justify-center absolute z-10">This is a Description Text</p>
-                </div>
-                <div class="snap-center snap-always flex flex-shrink-0 items-stretch justify-center relative hover:scale-125 hover:text-2xl">
-                    <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" class="justify-center w-full h-auto scale-100 relative z-0" />
-                    <p class="font-bold text-white self-center justify-center absolute z-10">This is a Description Text</p>
+                    <p class="font-bold text-white self-center justify-center absolute z-10">This will work soon!</p>
                 </div>
             </div>
         </div>
         <div id="profile" class="bg-black snap-start scroll-mb-30 min-h-screen w-full px-auto pt-20 border md:pt-10">
-            <div class="bg-slate-900/90 text-white w-5/6 mx-auto *:mx-20">
+            <div class="bg-slate-900/90 text-white w-5/6 mx-auto p-3 *:mx-20">
                 This is text
             </div>
         </div>
@@ -138,5 +120,6 @@
             </div>
         </div>
     </main>
+    <script src="scripts/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "BillBlaster API & WebPanel",
+    "techstack": [
+      "Laravel",
+      "Livewire",
+      "Tailwind"
+    ],
+    "completed": true,
+    "year_start": 2023,
+    "month_start": "09",
+    "month_ended": 12,
+    "website": "https://billblaster.example",
+    "screenshot": "https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+  },
+  {
+    "name": "MyGymDate API & WebPanel",
+    "techstack": [
+      "Laravel", 
+      "Livewire",
+      "Bootstrap"
+    ],
+    "completed": true,
+    "year_start": 2024,
+    "month_start": "02",
+    "month_ended": "04",
+    "website": "https://mygymdate.madewithlove.app/",
+    "screenshot": "https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+  },
+  {
+    "name": "InstantFolio",
+    "techstack": [
+      "Laravel", 
+      "Livewire",
+      "React.js",
+      "Tailwind"
+    ],
+    "completed": false,
+    "year_start": 2024,
+    "month_start": "06",
+    "website": "https://instantfolio.online",
+    "screenshot": "https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
+  }
+]
